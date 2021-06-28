@@ -1,0 +1,22 @@
+ /* @import './Assets/Fonts/CircularStd/circular-std-bold.ttf'; */
+ /* @import './Assets/Fonts/CircularStd/circular-std-book.ttf'; */
+
+ @font-face {
+ font-family: 'circular-std-bold';
+ src: url('./Assets/Fonts/CircularStd/circular-std-bold.ttf') format('truetype');
+ }
+
+ @font-face {
+     font-family: 'circular-std-book';
+     src: url('./Assets/Fonts/CircularStd/circular-std-book.ttf') format('truetype');
+ }
+
+ @font-face {
+    font-family: 'circular-std-black';
+    src: url('./Assets/Fonts/CircularStd/circular-std-black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'circular-std-medium';
+    src: url('./Assets/Fonts/CircularStd/circular-std-medium.ttf') format('truetype');
+}
