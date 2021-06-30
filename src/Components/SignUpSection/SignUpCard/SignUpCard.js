@@ -58,7 +58,9 @@ function SignUpCard(props) {
             return false
         }
         else {
-            setIsCheckedError('')
+            setCheckedError('')
+            setIsCheckedError(false)
+            return true
         }
     }
     const handleInputChange = (e) => {
@@ -75,7 +77,7 @@ function SignUpCard(props) {
         const checkedboxValid = validationChecked();
         if (emailValid && passValid && checkedboxValid) {
             setUser({})
-            props.history.push('/landingpage')
+            props.history.push('/signin')
         }
     }
     return (
@@ -91,6 +93,7 @@ function SignUpCard(props) {
                 className={classes.mainCardContainer}
             >
                 <TextInputAdornment
+                    autoComplete='off'
                     type="text"
                     placeholder='Email Address'
                     name='email'
@@ -123,6 +126,7 @@ function SignUpCard(props) {
             // style={{ border: '1px solid red', height: '80px' }}
             >
                 <TextInputAdornment
+                    autoComplete='off'
                     type="password"
                     placeholder='Password'
                     name='password'

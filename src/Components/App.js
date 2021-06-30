@@ -13,7 +13,7 @@ import { About } from '../Views/About/index'
 import { Pricing } from '../Views/Pricing/index';
 import { TermsAndCondition } from '../Views/TermsAndCondition/index';
 import { ThankYou } from '../Views/ThankYou/index'
-import { GetInTouch } from '../Views/GetInTouch/index';
+import { GetInTouchView } from '../Views/GetInTouchView/index';
 import { NotFound } from '../Views/NotFound/index'
 import {ForgotPassword} from '../Views/ForgotPassword/index';
 // import FormCard from './Shared/FormCard/FormCard';
@@ -55,9 +55,6 @@ function App() {
           <Route exact path='/termsandcondition'>
             <TermsAndCondition />
           </Route>
-          <Route exact path='/contact'>
-            <GetInTouch />
-          </Route>
           <Route exact path='/landingpage'>
             <ThankYou />
           </Route>
@@ -69,6 +66,9 @@ function App() {
           </Route>
           <Route exact path='/forgotpassword'>
             <ForgotPassword />
+          </Route>
+          <Route exact path='/getintouch'>
+            <GetInTouchView />
           </Route>
           <Route component={NotFound} />
         </Switch>

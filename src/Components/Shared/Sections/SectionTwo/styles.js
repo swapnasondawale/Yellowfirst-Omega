@@ -19,6 +19,8 @@ const useStyles = makeStyles((theme) => ({
     headLines: {
         width: '100%',
         height: 'auto',
+        [theme.breakpoints.down('sm')]: {
+        }
     },
     headOneContainer: {
         textAlign: 'left',

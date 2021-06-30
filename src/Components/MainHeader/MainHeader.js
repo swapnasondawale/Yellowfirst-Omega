@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from '@material-ui/core';
 import {CustomButton} from '../Shared/CustomButton/index';
 import useStyles from './styles'
-function MainHeader() {
+import { withRouter } from 'react-router';
+function MainHeader(props) {
     const classes = useStyles();
     return (
         <div className={classes.mainHeader}>
@@ -35,6 +36,7 @@ function MainHeader() {
                     backgroundColor='#F04037'
                     textTransform='capitalize'
                     bgHover='#F04037'
+                    click={() => {props.history.push('/signin')}}
                 >Get Started
                     </CustomButton>
             </div>
@@ -43,4 +45,4 @@ function MainHeader() {
     );
 }
 
-export default MainHeader;
+export default withRouter(MainHeader);

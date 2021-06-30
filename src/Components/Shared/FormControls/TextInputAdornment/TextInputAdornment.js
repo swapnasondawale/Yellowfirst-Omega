@@ -22,18 +22,19 @@ const useStyles = makeStyles(() => ({
             letterSpacing: '-0.56px',
             lineHeight: '23px',
         },
-        '& .MuiInput-marginDense' : {
+        '& .MuiInput-marginDense': {
             borderBottomColor: '#9C9AAA',
         }
     }
 }))
 export default function TextInputAdornment({ children, ...props }) {
     const classes = useStyles();
-    const { name, value, type, isAdornment, placeholder, error = null, handleChange } = props;
+    const { autoComplete,variant, name, value, type, isAdornment, placeholder, error = null, handleChange } = props;
     return (
         <Input
+            autoComplete={autoComplete}
             className={classes.mainInputs}
-            variant="outlined"
+            variant={variant}
             placeholder={placeholder}
             name={name}
             value={value}

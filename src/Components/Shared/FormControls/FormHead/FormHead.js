@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         [theme.breakpoints.down('xs')]: {
             fontSize: '18px',
-            padding: '0px 0px',
+            padding: '0px 0px 10px 0px',
             fontWeight: '300',
             letterSpacing: '-0.66px',
             lineHeight: '29px',

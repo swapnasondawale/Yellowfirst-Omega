@@ -78,6 +78,7 @@ function SignInCard(props) {
                 className={classes.mainCardContainer}
             >
                 <TextInputAdornment
+                    autoComplete='off'
                     type="text"
                     placeholder='Email Address'
                     name='email'
@@ -96,6 +97,7 @@ function SignInCard(props) {
                 className={classes.mainCardContainer}
             >
                 <TextInputAdornment
+                    autoComplete='off'
                     type="password"
                     placeholder='Password'
                     name='password'

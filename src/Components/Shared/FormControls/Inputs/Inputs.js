@@ -25,9 +25,18 @@ const useStyles = makeStyles(() => ({
         },
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
+                height: props => props.fieldSetHeight,
                 borderColor: '#EAE9F2',
                 borderRadius: '10px',
+                // width: 81px;
+                color: '#9C9AAA',
+                fontFamily: 'circular-std-book',
+                fontSize: '18px',
+                fontWeight: '300',
+                letterSpacing: '-0.56px',
+                lineHeight: '23px',
             },
+
             '&:hover fieldset': {
                 borderColor: 'black',
             },
@@ -39,23 +48,20 @@ const useStyles = makeStyles(() => ({
 
     }
 }))
-export default function Input({ children, ...props }) {
-    const classes = useStyles();
-    const { name, label, value, type, error = null, isAdornment, handleChange } = props;
+export default function Inputs({ children, ...props }) {
+    const { mainInputs } = useStyles(props);
+    const { autoComplete, name, placeholder, value, type, error = null, handleChange } = props;
     return (
         <TextField
-            className={classes.mainInputs}
+            autoComplete={autoComplete}
+            className={`${mainInputs}`}
             variant="outlined"
-            label={label}
+            placeholder={placeholder}
             name={name}
             value={value}
             type={type}
             onChange={handleChange}
-            InputProps={isAdornment}
-            // InputProps={{
-            //     endAdornment:
-            //         <IconButton onClick={() => 0}>x</IconButton>,
-            // }}
+            
             {...(error && { error: true, helperText: error })}
         >
             {children}

@@ -50,6 +50,7 @@ function ForgetCard(props) {
                 className={classes.mainCardContainer}
             >
                 <TextInputAdornment
+                    autoComplete='off'
                     type="text"
                     placeholder='Email Address'
                     name='email'

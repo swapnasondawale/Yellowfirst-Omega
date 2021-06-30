@@ -5,10 +5,10 @@ import Label from '../../Shared/FormControls/Label/Label';
 const useStyles = makeStyles((theme) => ({
     mainSignupWrapper: {
         display: 'grid',
-        gridRowGap: '80px',
+        gridRowGap: '120px',
         [theme.breakpoints.down('sm')]: {
             display: 'grid',
-            gridRowGap: '20px',
+            gridRowGap: '100px',
         }
     }
 }))

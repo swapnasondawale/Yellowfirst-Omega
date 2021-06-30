@@ -1,10 +1,12 @@
 import React from 'react';
+import './BackgroundImage.css'
 function BackgroundImage({ children, ...props }) {
     return (
         <div
+            className='bgImage'
             style={{
-                width: '100vw',
-                height: '100vh',
+                // width: '100vw',
+                // height: '100vh',
                 backgroundImage: `url(${props.background})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
@@ -14,7 +16,7 @@ function BackgroundImage({ children, ...props }) {
             }}
         >
             {children}
-        </div >
+        </div>
     );
 }
 

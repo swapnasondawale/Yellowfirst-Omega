@@ -63,18 +63,19 @@ const useStyles = makeStyles((theme) => ({
         },
     }
 }))
-function FeatureQuestion(props) {
+function ContactField(props) {
     const { gridContainer, mainContent,contentWrapper, headText, bodyText } = useStyles(props);
     return (
         <Grid container className={`${gridContainer}`}>
             <div className={`${mainContent}`}>
                 <div className={`${contentWrapper}`} >
                     <Typography className={`${headText}`} >{props.headText}</Typography>
-                    <Typography className={`${bodyText}`} >{props.bodyText}</Typography>
+                    <Typography className={`${bodyText}`} >{props.bodyTextOne}</Typography>
+                    <Typography className={`${bodyText}`} >{props.bodyTextTwo}</Typography>
                 </div>
             </div>
         </Grid>
     );
 }
 
-export default FeatureQuestion;
+export default ContactField;
